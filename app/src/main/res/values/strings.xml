@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Connie_bobaTea</string>
+
+    <string name="order">Let us order bobaTea now. </string>
+
+
+    <string name="sugar">Choose your sugar level </string>
+
+    <string name="howmany">How many cups do you want? </string>
+
+
+
+</resources>

@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/order"
+        android:text="@string/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+
+    <TextView
+        android:id="@+id/textSugarLevel"
+        android:text="@string/sugar"
+        android:layout_below="@id/order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        />
+
+
+        <ImageView
+            android:id="@+id/idBobaTea"
+            android:layout_below="@id/textSugarLevel"
+            android:layout_gravity="center"
+            android:layout_alignTop="@id/buttons"
+            android:gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:src="@drawable/bobatea"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"/>
+
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_below="@id/textSugarLevel"
+            android:layout_toRightOf="@id/idBobaTea"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/idFullSugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Full sugar (100%)"
+                    android:layout_margin="4dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickFull"
+                    />
+
+                <Button
+                    android:id="@+id/idLessSugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Less sugar (70%)"
+                    android:layout_margin="4dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickLess"
+
+                    />
+
+                <Button
+                    android:id="@+id/idHalfSugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Half sugar (50%)"
+                    android:layout_margin="4dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickHalf"
+
+                    />
+
+                <Button
+                    android:id="@+id/idQuarterSugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Quarter sugar (25%)"
+                    android:layout_margin="4dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickQuarter"
+                    />
+
+                <Button
+                    android:id="@+id/idNoSugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="No sugar (Healthy)"
+                    android:layout_margin="4dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickNo"
+                    />
+
+
+        </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/idReset"
+                    android:layout_below="@id/idBobaTea"
+                    android:layout_toLeftOf="@id/buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/buttons"
+                    android:text="Reset"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickReset"
+                    />
+
+
+
+        <TextView
+            android:id="@+id/textHowManyCups"
+            android:text="@string/howmany"
+            android:layout_below="@id/idReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="#000000"
+            />
+
+            <LinearLayout
+                android:id="@+id/plusMinus"
+                android:layout_below="@id/textHowManyCups"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/idMinus"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:text="-"
+                    android:textSize="36dp"
+                    android:layout_margin="8dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickMinus"/>
+
+                 <TextView
+                     android:id="@+id/numberOfCups"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="1"
+                     android:textSize="40dp"
+                     android:layout_marginLeft="16dp"
+                     android:layout_marginRight="16dp"/>
+
+                <Button
+                    android:id="@+id/idPlus"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:text="+"
+                    android:textSize="36dp"
+                    android:layout_margin="8dp"
+                    android:textAllCaps="false"
+                    android:onClick="clickPlus"
+                    />
+
+                    <Button
+                        android:id="@+id/cupReset"
+                        android:layout_width="64dp"
+                        android:layout_height="40dp"
+                        android:text="reset"
+                        android:textSize="16dp"
+                        android:layout_margin="8dp"
+                        android:textAllCaps="false"
+                        android:onClick="clickCupReset"
+                        />
+
+            </LinearLayout>
+
+</RelativeLayout>
